@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    position: relative; /* Make body a relative position for positioning children */
+}
+
+#background-video {
+    position: absolute; /* Positioning the video absolutely */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make video fill the entire width */
+    height: 100%; /* Make video fill the entire height */
+    object-fit: cover; /* Cover the whole area */
+    z-index: -1; /* Send the video behind the other elements */
+    opacity: 0.5; /* Adjust opacity as needed */
+}
+
+#auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    z-index: 1; /* Ensure forms are above the video */
+}
+
+form {
+    border: 1px solid #ccc;
+    padding: 40px;
+    margin: 15px;
+    width: 330px;
+    border-radius: 29px; /* Added border radius */
+    background: linear-gradient(225deg, #bae0e5, #9dbcc1); /* Updated gradient background */
+    box-shadow: -35px 35px 70px #6c8285, /* Updated box shadow */
+                35px -35px 70px #f0ffff; /* Updated box shadow */
+}
+
+.input {
+    background-color: #7ebccf;
+    width: 98%; /* Takes up the entire width of the container */
+    height: 30px;
+    padding: 13px;
+    border: 2px solid rgb(92, 111, 129);
+    border-radius: 5px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+}
+  
+.input:hover {
+    border-color: rgb(40, 75, 75);
+    box-shadow: 0 0 10px rgba(34, 110, 110, 0.5);
+}
+  
+.input:focus {
+    color: rgb(20, 83, 83);
+    background-color: #101d20;
+    outline: none;
+    border-color: rgb(20, 3, 31);
+    box-shadow: 0 0 15px rgb(0, 255, 255), 0 0 5px rgba(0, 255, 255, 0.5);
+    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+button {
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #077496,
+                -6px -6px 12px #52819c;
+    cursor: pointer; /* Ensure cursor is pointer */
+    background-color: rgb(102, 180, 204); /* Set background color to blue */
+    color: white; /* Set text color to white for contrast */
+    transition: background-color 0.3s ease; /* Add transition for background color */
+}
+
+button::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #698cd8 0%, #0ec7ff 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+button:hover {
+    background-color: rgb(60, 147, 218); /* Change background color on hover */
+}
+
+button:hover::before {
+    width: 9.5em;
+}
+
+.error-message {
+    color: red;
+}

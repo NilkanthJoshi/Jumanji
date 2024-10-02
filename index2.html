@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css">
+    <title>Welcome To Jumanji</title>
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop class="background-video">
+        <source src="vid2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <header>
+        <h1>Welcome To Jumanji Jungle Safari</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#safari">Book a Safari</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Jumanji</h2>
+        <p>Experience the thrill of the jungle like never before! Join us on an unforgettable safari adventure.</p>
+    </section>
+
+    <section id="safari">
+        <h2>Book Your Safari</h2>
+        <form id="booking-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+
+            <label for="time">Time:</label>
+            <select id="time" required>
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+            </select>
+
+            <button type="submit">Book Now</button>
+        </form>
+        <div id="confirmation-message"></div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@jumanji.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Welcome To Jumanji. All rights reserved.</p>
+    </footer>
+
+    <script src="script2.js"></script>
+</body>
+</html>

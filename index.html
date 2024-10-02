@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In / Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="vid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <main>
+        <section id="auth">
+            <form id="signup-form">
+                <h2>Sign Up</h2>
+                <input type="email" id="email" class="input" placeholder="Email" required><br><br>
+                <input type="password" id="password" class="input" placeholder="Password" required><br><br>
+                <input type="password" id="confirm-password" class="input" placeholder="Confirm Password" required><br><br>
+                <button type="submit">Sign Up</button>
+                <p id="signup-message" class="error-message"></p>
+                <p><a href="#" id="show-signin">Already have an account? Sign In</a></p>
+            </form>
+
+            <form id="signin-form" style="display: none;">
+                <h2>Sign In</h2>
+                <input type="email" id="signin-email" class="input" placeholder="Email" required><br><br>
+                <input type="password" id="signin-password" class="input" placeholder="Password" required><br><br>
+                <button type="submit">Sign In</button>
+                <p id="signin-message" class="error-message"></p>
+                <p><a href="#" id="show-signup">Don't have an account? &nbsp;Sign Up</a></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <br><br><br><p>&copy; 2024 Welcome To Jumanji. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
